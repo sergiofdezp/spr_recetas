@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Index recetas</title>
 
     <!-- Bootstrap 5.0.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,7 +17,9 @@
 </head>
 
 <body>
-    <div class="container">
+    <div th:include="plantilla.html::header" class="text-center"></div>
+    <div th:include="plantilla.html::navbar"></div>
+    <div class="container my-2">
         <table id="recetasTable">
             <thead>
                 <tr>
