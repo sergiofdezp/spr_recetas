@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+:root {
+    /* config paleta de colores */
+
+    --colorGrey: #EEEDEB;
+    --colorPeach: #E0CCBE;
+    --colorSage: #747264;
+    --colorBrown: #3C3633;
+  
+  /* Tamaños */
+  --sizeFuente: 12px;
+  
+  /* Fuentes */
+  --fuente: 'Helvetica Neue', Arial, sans-serif;
+  --fuenteContraste: 'Georgia', 'Times New Roman', serif;
+  
+  /* Alturas de cabecera y pie */
+  --alturaHeader: 180px;
+  --alturaNav: 50px;
+  --alturaFooter: 60px;
+}
+
+/* header styles */
+header{
+	/*este height se usa en el calculo del tamaño del main*/
+	height:var(--alturaHeader);
+	
+	background-color: var(--colorBrown);
+	display:flex;
+	flex-direction:column;
+	justify-content: flex-end;
+}
+
+h1{
+	margin: 10px;
+	color: var(--colorPeach);
+	font-family: var(--fuenteContraste);
+}
+
+/* nav styles */
+nav {
+    background-color: var(--colorSage);
+    height: var(--alturaNav);
+}
+
+.nav-link {
+    color: var(--colorGrey) !important;
+}
+
+.nav-link:hover {
+    color: var(--colorBrown) !important;
+}
+
+/* main styles */
+main{
+	min-height: calc(100vh - (var(--alturaHeader) + var(--alturaNav) + var(--alturaFooter)));
+}
+
+/* footer styles */
+footer{
+	/*este height se usa en el calculo del tamaño del main*/
+	height:var(--alturaFooter);
+	background-color: var(--colorBrown);
+}
