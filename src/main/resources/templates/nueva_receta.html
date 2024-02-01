@@ -15,11 +15,10 @@
 <body>
     <div th:include="plantilla.html::header" class="text-center"></div>
     <div th:include="plantilla.html::navbar"></div>
-    
-    <main class="container">
-        <section class="row justify-content-center pt-5">
-            <form class="col-5 border rounded p-4" th:action="@{/guardar_receta}" th:object="${objeto_entidad}"
-                method="post">
+
+    <main class="container d-flex align-items-center">
+        <section class="container-fluid w-50">
+            <form class="border rounded p-4" th:action="@{/guardar_receta}" th:object="${objeto_entidad}" method="post">
                 <label for="nombre" class="form-label">Nombre de la receta</label>
                 <input type="text" class="form-control mb-3" th:field="*{nombre}" name="nombre"
                     placeholder="Introduzca el nombre de la receta" required>
@@ -33,9 +32,9 @@
                     <input type="submit" class="btn btn-success btn-sm" value="Guardar">
                 </div>
             </form>
-        </div>
+            </div>
     </main>
-    
+
     <div th:include="plantilla.html::footer"></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
